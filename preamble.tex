@@ -24,13 +24,26 @@
 \definecolor{urbanblue}{HTML}{1696D2}
 \usepackage[many]{tcolorbox}
 
-\newcommand{\headertemplate}[2]{
+\usepackage{enumitem} % bullet alignment
+\setlist[2]{nosep} % sets the itemsep and parsep for all level two lists to 0
+\setenumerate{nosep} % sets no itemsep for enumerate lists only
+
+
+% contact information
+\newcommand{\contactinfo}[0]{
   \thispagestyle{empty}
-  \begin{tikzpicture}[overlay, remember picture]
-    \draw let \p1 = (current page.west), \p2 = (current page.east) in
-      node[minimum width=\x2-\x1, minimum height=2cm, draw=urbanblue, rectangle, fill=urbanblue, anchor=north west, align=left, text width=\x2-\x1] at ($(current page.north west)$) {\huge\bfseries\color{white} \quad #1};
-    \draw let \p1 = (current page.west), \p2 = (current page.east) in
-      node[minimum width=\x2-\x1, minimum height=2cm, fill=none, anchor=north west, align=right, text width=\x2-\x1] at ($(current page.north west)$) {\large\bfseries\color{white} #2 \quad \quad \quad};       
+  \begin{tikzpicture}[remember picture, overlay]
+    \draw 
+      node[anchor=south west, align=center, minimum height=0.5in, minimum width=8.5in, text width=8in] at ($(current page.south west)$) 
+      {\color{gray}Urban Institute
+      \color{urbanblue}$\blacksquare$
+      \color{gray}2100 M Street NW 
+      \color{urbanblue}$\blacksquare$ 
+      \color{gray}Washington, DC 20037 
+      \color{urbanblue}$\blacksquare$ 
+      \color{gray}202.833.7200 
+      \color{urbanblue}$\blacksquare$ 
+      \textcolor{urbanblue}{www.urban.org}};
   \end{tikzpicture}
 }
 
@@ -58,18 +71,23 @@
 }
 
 
-% establish margins for the document
-%\addtolength{\topmargin}{-.75in}
-%
-%\newenvironment{changemargin}[2]{%
-%  \begin{list}{}{%
-%    \setlength{\topsep}{0pt}%
-%    \setlength{\leftmargin}{#1}%
-%    \setlength{\rightmargin}{#2}%
-%    \setlength{\listparindent}{\parindent}%
-%    \setlength{\itemindent}{\parindent}%
-%    \setlength{\parsep}{\parskip}%
-%  }%
-%  \item[]}{\end{list}}
+% bullet points
+\newenvironment{urbanbullets}
+{ \begin{itemize}[align=left]
+\setlength\itemsep{0em}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{itemize}                  } 
+
+% numbered list
+\newenvironment{urbanenumerate}
+{ \begin{enumerate}[align=left]
+\setlength\itemsep{0em}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{enumerate}                  } 
+
 
 
