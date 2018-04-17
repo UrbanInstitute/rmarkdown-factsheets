@@ -1,0 +1,75 @@
+% set font encoding for PDFLaTeX or XeLaTeX
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage[T1]{fontenc}
+\usepackage{color} 
+\usepackage{mdframed}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage[normalem]{ulem}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{lipsum}
+\definecolor{urbanblue}{HTML}{1696D2}
+\usepackage[many]{tcolorbox}
+
+\newcommand{\headertemplate}[2]{
+  \thispagestyle{empty}
+  \begin{tikzpicture}[overlay, remember picture]
+    \draw let \p1 = (current page.west), \p2 = (current page.east) in
+      node[minimum width=\x2-\x1, minimum height=2cm, draw=urbanblue, rectangle, fill=urbanblue, anchor=north west, align=left, text width=\x2-\x1] at ($(current page.north west)$) {\huge\bfseries\color{white} \quad #1};
+    \draw let \p1 = (current page.west), \p2 = (current page.east) in
+      node[minimum width=\x2-\x1, minimum height=2cm, fill=none, anchor=north west, align=right, text width=\x2-\x1] at ($(current page.north west)$) {\large\bfseries\color{white} #2 \quad \quad \quad};       
+  \end{tikzpicture}
+}
+
+\usepackage{memhfixc}
+
+% titles (14pt font)
+\newcommand{\urbantitle}[1]{
+  \begin{center}
+      \textbf{\LARGE{#1}}\vspace{-3ex}
+  \end{center}
+}
+  
+% subtitles (12pt font)
+\newcommand{\urbansubtitle}[1]{
+  \begin{center}
+    \Large{\textcolor{urbanblue}{#1}}\vspace{-1.5ex}
+  \end{center}
+}
+
+% authors (11pt font)
+\newcommand{\urbanauthors}[1]{
+  \begin{center}
+    \textit{\large{#1}}
+  \end{center}
+}
+
+
+% establish margins for the document
+%\addtolength{\topmargin}{-.75in}
+%
+%\newenvironment{changemargin}[2]{%
+%  \begin{list}{}{%
+%    \setlength{\topsep}{0pt}%
+%    \setlength{\leftmargin}{#1}%
+%    \setlength{\rightmargin}{#2}%
+%    \setlength{\listparindent}{\parindent}%
+%    \setlength{\itemindent}{\parindent}%
+%    \setlength{\parsep}{\parskip}%
+%  }%
+%  \item[]}{\end{list}}
+
+
