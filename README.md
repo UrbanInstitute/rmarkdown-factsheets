@@ -25,3 +25,15 @@ tinytex::install_tinytex()
 ### Fork or download this repository
 
 Fork this respoitory or download the contents of this repository to get access to the template. 
+
+## Contributors
+
+### Creator
+
+* Aaron Williams
+
+### Contributors
+
+* Marni Epstein
+* Irvin Mull
+* Graham MacDonald 

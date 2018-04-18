@@ -29,6 +29,10 @@
 \setenumerate{nosep} % sets no itemsep for enumerate lists only
 
 
+% turn off page numbering
+\pagenumbering{gobble}
+
+
 % contact information
 \newcommand{\contactinfo}[0]{
   \thispagestyle{empty}
@@ -89,5 +93,25 @@
     \setlength{\parsep}{0pt}     }
 { \end{enumerate}                  } 
 
+% funderstatement
+\usepackage[none]{hyphenat}
 
+%\newcommand{\urbanboilerplate}[3]{
+%  \thispagestyle{empty}
+%  \begin{tikzpicture}[remember picture, overlay]
+%    \draw (2, 2) to (8, 2);
+%    \draw 
+%      node[anchor=south west, align=left, minimum height=1.5in, minimum width=8.5in, text width=6.5in] at ($(current page.south west)$) 
+%      {This fact sheet was funded by #1. The views expressed are those of the author/authors and should not be attributed to the Urban Institute, its trustees, or %its funders. Further information on the Urban Institute’s funding principles is available at urban.org/fundingprinciples. 
+%      
+%      Copyright © #2 #3. Urban Institute. Permission is granted for reproduction of this file, with attribution to the Urban Institute.};
+%  \end{tikzpicture}
+%}
 
+\newcommand{\urbanboilerplate}[3]{
+  \vspace*{\fill}
+  \noindent\rule{6.5in}{1pt}
+  This fact sheet was funded by #1. The views expressed are those of the author/authors and should not be attributed to the Urban Institute, its trustees, or its funders. Further information on the Urban Institute’s funding principles is available at \href{https://www.urban.org/aboutus/our-funding/funding-principles}{urban.org/fundingprinciples}. 
+
+  Copyright © #2 #3. Urban Institute. Permission is granted for reproduction of this file, with attribution to the Urban Institute.
+}
