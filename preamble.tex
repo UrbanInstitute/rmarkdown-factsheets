@@ -1,16 +1,12 @@
-% set font encoding for PDFLaTeX or XeLaTeX
-\usepackage[utf8]{inputenc}
-\usepackage[default]{lato}
-\usepackage[T1]{fontenc}
-\usepackage{color} 
-\usepackage{mdframed}
-\usepackage{multicol}
-\usepackage{graphicx}
+% explicitly call these packages to avoid this issue:
+% https://stackoverflow.com/questions/46080853/why-does-rendering-a-pdf-from-rmarkdown-require-closing-rstudio-between-renders?
+% utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
 \usepackage{multirow}
-\usepackage[table]{xcolor}
+\usepackage{color}          % enables font colors
+\usepackage[table]{xcolor}  % enables even more font and background colors
 \usepackage{wrapfig}
 \usepackage{float}
 \usepackage{colortbl}
@@ -18,20 +14,21 @@
 \usepackage{tabu}
 \usepackage{threeparttable}
 \usepackage[normalem]{ulem}
+
+% set font encoding for PDFLaTeX or XeLaTeX
+\usepackage[utf8]{inputenc}   % sets document encoding to utf8
+\usepackage[default]{lato}    % sets default font to Lato
+\usepackage[T1]{fontenc}
 \usepackage{tikz}
 \usetikzlibrary{calc}
-\usepackage{lipsum}
-\definecolor{urbanblue}{HTML}{1696D2}
-\usepackage[many]{tcolorbox}
+\usepackage{memhfixc}
 
-\usepackage{enumitem} % bullet alignment
-\setlist[2]{nosep} % sets the itemsep and parsep for all level two lists to 0
-\setenumerate{nosep} % sets no itemsep for enumerate lists only
-
-
-% turn off page numbering
-\pagenumbering{gobble}
-
+% document setup
+\definecolor{urbanblue}{HTML}{1696D2} %defines the Urban Institute blue color
+\usepackage{enumitem}  % bullet alignment
+\setlist[2]{nosep}     % sets the itemsep and parsep for all level two lists to 0
+\setenumerate{nosep}   % sets no itemsep for enumerate lists only
+\pagenumbering{gobble} % turn off page numbering
 
 % contact information
 \newcommand{\contactinfo}[0]{
@@ -50,8 +47,6 @@
       \textcolor{urbanblue}{www.urban.org}};
   \end{tikzpicture}
 }
-
-\usepackage{memhfixc}
 
 % titles (14pt font)
 \newcommand{\urbantitle}[1]{
@@ -94,20 +89,6 @@
 { \end{enumerate}                  } 
 
 % funderstatement
-\usepackage[none]{hyphenat}
-
-%\newcommand{\urbanboilerplate}[3]{
-%  \thispagestyle{empty}
-%  \begin{tikzpicture}[remember picture, overlay]
-%    \draw (2, 2) to (8, 2);
-%    \draw 
-%      node[anchor=south west, align=left, minimum height=1.5in, minimum width=8.5in, text width=6.5in] at ($(current page.south west)$) 
-%      {This fact sheet was funded by #1. The views expressed are those of the author/authors and should not be attributed to the Urban Institute, its trustees, or %its funders. Further information on the Urban Institute’s funding principles is available at urban.org/fundingprinciples. 
-%      
-%      Copyright © #2 #3. Urban Institute. Permission is granted for reproduction of this file, with attribution to the Urban Institute.};
-%  \end{tikzpicture}
-%}
-
 \newcommand{\urbanboilerplate}[3]{
   \vspace*{\fill}
   \noindent\rule{6.5in}{1pt}
