@@ -29,6 +29,8 @@
 \setlist[2]{nosep}     % sets the itemsep and parsep for all level two lists to 0
 \setenumerate{nosep}   % sets no itemsep for enumerate lists only
 \pagenumbering{gobble} % turn off page numbering
+\usepackage[hang,flushmargin]{footmisc} % don't indent footnotes
+\renewcommand\thefootnote{\textcolor{urbanblue}{\arabic{footnote}}} % change the color of the footnote indicator
 
 % contact information
 \newcommand{\contactinfo}[0]{
@@ -68,6 +70,33 @@
     \textit{\large{#1}}
   \end{center}
 }
+
+% subhead
+\newcommand{\urbansubhead}[1]{
+  \textbf{\large{#1}}
+}
+
+% figure label
+\newcommand{\urbanfigure}[1]{
+  \textcolor{urbanblue}{\normalsize{FIGURE #1}}
+}
+
+% figure title
+\newcommand{\urbanfiguretitle}[1]{
+  \textbf{\normalsize{#1}}
+}
+
+% figure source
+\newcommand{\urbansource}[1]{
+  \textbf{\footnotesize{#1}}
+}
+
+% figure note
+\newcommand{\urbannote}[1]{
+  \textbf{\footnotesize{#1}}
+}
+
+
 
 
 % bullet points

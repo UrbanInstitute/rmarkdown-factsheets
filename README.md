@@ -17,7 +17,7 @@ Creating PDFs with R Markdown requires a [LaTeX](https://www.latex-project.org/a
 Submit the following code in R to install TinyTex ([full instructions here](https://yihui.name/tinytex/)):
 
 ```
-install.packages(c('tinytex', 'rmarkdown'))
+install.packages(c("tinytex", "rmarkdown"))
 tinytex::install_tinytex()
 ```
 **Note:** If you installed MiKTeX in the past, uninstall it before installing TinyTex. 
@@ -35,5 +35,6 @@ Fork this respoitory or download the contents of this repository to get access t
 ### Contributors
 
 * Marni Epstein
+* Bhargavi Ganesh
 * Irvin Mull
 * Graham MacDonald 
