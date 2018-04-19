@@ -37,15 +37,15 @@
   \thispagestyle{empty}
   \begin{tikzpicture}[remember picture, overlay]
     \draw 
-      node[anchor=south west, align=center, minimum height=0.5in, minimum width=8.5in, text width=8in] at ($(current page.south west)$) 
-      {\color{gray}Urban Institute
-      \color{urbanblue}$\blacksquare$
-      \color{gray}2100 M Street NW 
-      \color{urbanblue}$\blacksquare$ 
-      \color{gray}Washington, DC 20037 
-      \color{urbanblue}$\blacksquare$ 
-      \color{gray}202.833.7200 
-      \color{urbanblue}$\blacksquare$ 
+      node[anchor=south west, minimum height=0.5in, minimum width=8.5in, text width=8in] at ($(current page.south west) + (1.9,0)$) 
+      {\color{gray}Urban Institute \space
+      \color{urbanblue}$\blacksquare$ \space
+      \color{gray}2100 M Street NW \space
+      \color{urbanblue}$\blacksquare$ \space
+      \color{gray}Washington, DC 20037 \space
+      \color{urbanblue}$\blacksquare$ \space
+      \color{gray}202.833.7200 \space
+      \color{urbanblue}$\blacksquare$ \space
       \textcolor{urbanblue}{www.urban.org}};
   \end{tikzpicture}
 }
