@@ -37,28 +37,29 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 \urbansubhead{Subhead}
 
-\urbanfigure{1}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\urbanfigurenumber{1}
 
 \urbanfiguretitle{Title of Figure}
 
-\urbansource{Source: }
+[figure]
 
+\urbansource{Source: }
 \urbansource{Note: }
 
-
-I'm writing something here to test \footnote{footnotes working fine}
-several features.
+This factsheet has powerful footnote \footnote{Don't worry about numbering!} capabilities. 
 
 \begin{urbanbullets}
-\item Bulleted list
-\item Bulleted list
-\item Bulleted list
+  \item Bulleted list
+  \item Bulleted list
+  \item Bulleted list
 \end{urbanbullets}
 
 \begin{urbanenumerate}
-\item Numbered list
-\item Numbered list
-\item Numbered list
+  \item Numbered list
+  \item Numbered list
+  \item Numbered list
 \end{urbanenumerate}
 
 \contactinfo{}
@@ -72,7 +73,7 @@ several features.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-I'm writing something here to test \footnote{footnotes working fine}
+Here's a second instance \footnote{Footnotes on the second page appear below the funder statement} of footnotes.
 several features.
 
 \urbanboilerplate{The Urban Institute R Users Group}{April}{2018}

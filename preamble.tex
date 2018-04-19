@@ -77,7 +77,7 @@
 }
 
 % figure label
-\newcommand{\urbanfigure}[1]{
+\newcommand{\urbanfigurenumber}[1]{
   \textcolor{urbanblue}{\normalsize{FIGURE #1}}
 }
 
@@ -88,16 +88,13 @@
 
 % figure source
 \newcommand{\urbansource}[1]{
-  \textbf{\footnotesize{#1}}
+  \textbf{\footnotesize{#1}} \break
 }
 
 % figure note
 \newcommand{\urbannote}[1]{
-  \textbf{\footnotesize{#1}}
+  \textbf{\footnotesize{#1}} \break
 }
-
-
-
 
 % bullet points
 \newenvironment{urbanbullets}
@@ -121,7 +118,7 @@
 \newcommand{\urbanboilerplate}[3]{
   \vspace*{\fill}
   \noindent\rule{6.5in}{1pt}
-  This fact sheet was funded by #1. The views expressed are those of the author/authors and should not be attributed to the Urban Institute, its trustees, or its funders. Further information on the Urban Institute’s funding principles is available at \href{https://www.urban.org/aboutus/our-funding/funding-principles}{urban.org/fundingprinciples}. 
+  \small{This fact sheet was funded by #1. The views expressed are those of the author/authors and should not be attributed to the Urban Institute, its trustees, or its funders. Further information on the Urban Institute’s funding principles is available at \href{https://www.urban.org/aboutus/our-funding/funding-principles}{urban.org/fundingprinciples}. 
 
-  Copyright © #2 #3. Urban Institute. Permission is granted for reproduction of this file, with attribution to the Urban Institute.
+  Copyright © #2 #3. Urban Institute. Permission is granted for reproduction of this file, with attribution to the Urban Institute.}
 }
