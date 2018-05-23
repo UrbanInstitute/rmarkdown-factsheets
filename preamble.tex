@@ -22,6 +22,7 @@
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \usepackage{memhfixc}
+\usepackage{amssymb}          % for itemized list styles
 
 % document setup
 \definecolor{urbanblue}{HTML}{1696D2} %defines the Urban Institute blue color
@@ -102,6 +103,11 @@
 }
 
 % bullet points
+\renewcommand{\labelitemi}{\color{urbanblue}\tiny$\blacksquare$}
+\renewcommand{\labelitemii}{\color{urbanblue}\tiny$\blacksquare$}
+\renewcommand{\labelitemiii}{\color{urbanblue}\tiny$\blacksquare$}
+\renewcommand{\labelitemiv}{\color{urbanblue}\tiny$\blacksquare$}
+
 \newenvironment{urbanbullets}
 { \begin{itemize}[align=left]
 \setlength\itemsep{0em}
