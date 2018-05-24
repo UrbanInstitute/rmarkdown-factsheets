@@ -104,27 +104,25 @@
 }
 
 % bullet points
-\renewcommand{\labelitemi}{\color{urbanblue}\tiny$\blacksquare$}
-\renewcommand{\labelitemii}{\color{urbanblue}\tiny$\blacksquare$}
-\renewcommand{\labelitemiii}{\color{urbanblue}\tiny$\blacksquare$}
-\renewcommand{\labelitemiv}{\color{urbanblue}\tiny$\blacksquare$}
+\renewcommand{\labelitemi}{\color{urbanblue}\tiny$\blacksquare$}   % blue square
+\renewcommand{\labelitemii}{\color{urbanblue}\tiny$\blacksquare$}  % blue square
+\renewcommand{\labelitemiii}{\color{urbanblue}\tiny$\blacksquare$} % blue square
+\renewcommand{\labelitemiv}{\color{urbanblue}\tiny$\blacksquare$}  % blue square
 
 \newenvironment{urbanbullets}
-{ \begin{itemize}[align=left]
-\setlength\itemsep{0em}
-    \setlength{\itemsep}{0pt}
-    \setlength{\parskip}{0pt}
-    \setlength{\parsep}{0pt}     }
-{ \end{itemize}                  } 
+{\begin{itemize}[leftmargin=*,labelindent=0.25in,labelsep=0.1875in]
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}}
+{\end{itemize}} 
 
 % numbered list
 \newenvironment{urbanenumerate}
-{ \begin{enumerate}[align=left]
-\setlength\itemsep{0em}
-    \setlength{\itemsep}{0pt}
-    \setlength{\parskip}{0pt}
-    \setlength{\parsep}{0pt}     }
-{ \end{enumerate}                  } 
+{\begin{enumerate}[leftmargin=*,labelindent=0.25in,labelsep=0.15625in]
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}}
+{\end{enumerate}} 
 
 % funderstatement
 \newcommand{\urbanboilerplate}[3]{
