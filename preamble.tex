@@ -25,13 +25,14 @@
 \usepackage{amssymb}          % for itemized list styles
 
 % document setup
-\definecolor{urbanblue}{HTML}{1696D2} %defines the Urban Institute blue color
-\usepackage{enumitem}  % bullet alignment
-\setlist[2]{nosep}     % sets the itemsep and parsep for all level two lists to 0
-\setenumerate{nosep}   % sets no itemsep for enumerate lists only
-\pagenumbering{gobble} % turn off page numbering
+\definecolor{urbanblue}{HTML}{1696D2}   % defines the Urban Institute blue color
+\usepackage{enumitem}                   % bullet alignment
+\setlist[2]{nosep}                      % sets the itemsep and parsep for all level two lists to 0
+\setenumerate{nosep}                    % sets no itemsep for enumerate lists only
+\pagenumbering{gobble}                  % disable page numbering
 \usepackage[hang,flushmargin]{footmisc} % don't indent footnotes
-\usepackage[document]{ragged2e} % ragged right
+\usepackage[document]{ragged2e}         % ragged right
+\usepackage[none]{hyphenat}             % disable work breaks
 \renewcommand\thefootnote{\textcolor{urbanblue}{\arabic{footnote}}} % change the color of the footnote indicator
 \hypersetup{
   colorlinks,
@@ -44,7 +45,7 @@
   \thispagestyle{empty}
   \begin{tikzpicture}[remember picture, overlay]
     \draw 
-      node[anchor=south west, minimum height=0.5in, minimum width=8.5in, text width=8in] at ($(current page.south west) + (1.9,0)$) 
+      node[anchor=south west, minimum height=0.5in, minimum width=8.5in, text width=8in] at ($(current page.south west) + (0.75in,0.13in)$) 
       {\color{gray}Urban Institute \space
       \color{urbanblue}$\blacksquare$ \space
       \color{gray}2100 M Street NW \space
@@ -60,14 +61,14 @@
 % titles (14pt font)
 \newcommand{\urbantitle}[1]{
   \begin{center}
-      \textbf{\LARGE{#1}}\vspace{-3ex}
+      \textbf{\LARGE{#1}}
   \end{center}
 }
   
 % subtitles (12pt font)
 \newcommand{\urbansubtitle}[1]{
   \begin{center}
-    \Large{\textcolor{urbanblue}{#1}}\vspace{-1.5ex}
+    \Large{\textcolor{urbanblue}{#1}}
   \end{center}
 }
 
@@ -124,11 +125,22 @@
 \setlength{\parsep}{0pt}}
 {\end{enumerate}} 
 
-% funderstatement
+% boiler plate
 \newcommand{\urbanboilerplate}[3]{
-  \vspace*{\fill}
-  \noindent\rule{6.5in}{1pt}
-  \small{This fact sheet was funded by #1. The views expressed are those of the author/authors and should not be attributed to the Urban Institute, its trustees, or its funders. Further information on the Urban Institute’s funding principles is available at \href{https://www.urban.org/aboutus/our-funding/funding-principles}{urban.org/fundingprinciples}. 
-
-  Copyright © #2 #3. Urban Institute. Permission is granted for reproduction of this file, with attribution to the Urban Institute.}
+  \thispagestyle{empty}
+  
+  \begin{tikzpicture}[remember picture, overlay]
+    % horizontal line
+    \draw (current page.south west) + (1in,1.25in) -- ($(current page.south east) + (-1in, 1.25in)$);  
+    % boilerplat language
+    \draw 
+      node[align=left, anchor=south west, minimum height=0.5in, minimum width=8.5in, text width=6.5in] at ($(current page.south west) + (0in,0.38in)$) 
+      {
+      \small{This fact sheet was funded by #1. The views expressed are those of the author/authors and should not be attributed to the Urban Institute, its trustees, or its funders. Further information on the Urban Institute’s funding principles is available at \href{https://www.urban.org/aboutus/our-funding/funding-principles}{urban.org/fundingprinciples.}
+      
+      
+      Copyright © #2 #3. Urban Institute. Permission is granted for reproduction of this file, with attribution to the Urban Institute.}
+      };
+      \end{tikzpicture}
 }
+
