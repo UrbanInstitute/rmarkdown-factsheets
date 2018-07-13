@@ -26,7 +26,7 @@ tinytex::install_tinytex()
 
 ### Fork or download this repository
 
-Fork this respoitory or download the contents of this repository to get access to the template. 
+Fork this respoitory or download the contents of this repository to get access to the template. Using [R Projects](https://ui-research.github.io/r-at-urban/intro-to-r.html#projects) with the template is highly recommended and an R Project is included in the repository.  
 
 ## Use
 
