@@ -21,8 +21,7 @@ options(knitr.kable.NA = "")
 
 ```{r r-setup, include=FALSE}
 library(tidyverse)
-
-source("https://raw.githubusercontent.com/UrbanInstitute/urban_R_theme/urban_R_theme_revamp/urban_theme.R")
+library(urbnthemes)
 ```
 
 \begin{figure}
