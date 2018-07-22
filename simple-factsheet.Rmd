@@ -20,7 +20,7 @@ options(knitr.kable.NA = "")
 ```
 
 \begin{figure}
-  \hspace{-0.08in}
+  \hspace{-0.12in}
   \includegraphics[width=1.5in]{design/urban_grid_blue_white.jpg}
   \label{fig:boat1}
 \end{figure}
