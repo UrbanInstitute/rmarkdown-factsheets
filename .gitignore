@@ -37,3 +37,6 @@ vignettes/*.pdf
 *output/
 
 *.db
+
+# Microsoft word example factsheets
+*word-examples/
