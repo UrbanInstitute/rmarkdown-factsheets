@@ -37,38 +37,38 @@ Fork this respoitory or download the contents of this repository to get access t
 Some of the changes require using custom LaTeX macros:
 
 * `\contactinfo{}` Adds the Urban Institute contact information to the end of the page. 
-* `\urbantitle{}` Adds formatted title. **Argument:** text of title
-* `\urbansubtitle{}` Adds formatted subtitle. **Argument:** text of subtitle
-* `\urbanauthors{}` Adds formatted byline. **Argument:** text of byline
-* `\urbansubhead{}` Adds formatted subhead. **Argument:** text of subhead
-* `\urbanfigurenumber{}` Adds formatted figure label. **Argument:** number of figure
-* `\urbanfiguretitle{}` Adds formatted figure title. **Argument:** title of figure
-* `\urbansource{}` Adds formatted figure source. **Argument:** source of figure
-* `\urbannote{}` Adds formatted figure note. **Argument:** note of figure
-* `\urbanboilerplate{}{}{}` Adds Urban Institute boilerplate to end of current page. **Arguments:** funder name, month, year
+* `\urbntitle{}` Adds formatted title. **Argument:** text of title
+* `\urbnsubtitle{}` Adds formatted subtitle. **Argument:** text of subtitle
+* `\urbnauthors{}` Adds formatted byline. **Argument:** text of byline
+* `\urbnsubhead{}` Adds formatted subhead. **Argument:** text of subhead
+* `\urbnfigurenumber{}` Adds formatted figure label. **Argument:** number of figure
+* `\urbnfiguretitle{}` Adds formatted figure title. **Argument:** title of figure
+* `\urbnsource{}` Adds formatted figure source. **Argument:** source of figure
+* `\urbnnote{}` Adds formatted figure note. **Argument:** note of figure
+* `\urbnboilerplate{}{}{}` Adds Urban Institute boilerplate to end of current page. **Arguments:** funder name, month, year
 
 ### Environments
 
 Some of the changes require using custom LaTeX environments:
 
-* `\urbanbullets{}` Creates an environment for styled bullets. Use:
+* `\urbnbullets{}` Creates an environment for styled bullets. Use:
 
 ```
-\begin{urbanbullets}
+\begin{urbnbullets}
   \item bullet text
   \item bullet text
   \item bullet text
-\end{urbanbullets}
+\end{urbnbullets}
 ```
 
-* `\urbanenumerate{}` Creates an environment for styled bullets. Use:
+* `\urbnenumerate{}` Creates an environment for styled bullets. Use:
 
 ```
-\begin{urbanenumerate}
+\begin{urbnenumerate}
   \item list text
   \item list text
   \item list text
-\end{urbanenumerate}
+\end{urbnenumerate}
 ```
 
 ## General guidelines

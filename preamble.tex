@@ -25,7 +25,7 @@
 \usepackage{amssymb}          % for itemized list styles
 
 % document setup
-\definecolor{urbanblue}{HTML}{1696D2}   % defines the Urban Institute blue color
+\definecolor{urbnblue}{HTML}{1696D2}    % defines the Urban Institute blue color
 \usepackage{enumitem}                   % bullet alignment
 \setlist[2]{nosep}                      % sets the itemsep and parsep for all level two lists to 0
 \setenumerate{nosep}                    % sets no itemsep for enumerate lists only
@@ -33,11 +33,11 @@
 \usepackage[hang,flushmargin]{footmisc} % don't indent footnotes
 \usepackage[document]{ragged2e}         % ragged right
 \usepackage[none]{hyphenat}             % disable work breaks
-\renewcommand\thefootnote{\textcolor{urbanblue}{\arabic{footnote}}} % change the color of the footnote indicator
+\renewcommand\thefootnote{\textcolor{urbnblue}{\arabic{footnote}}} % change the color of the footnote indicator
 \hypersetup{
   colorlinks,
-  linkcolor=urbanblue,
-  urlcolor=urbanblue,
+  linkcolor=urbnblue,
+  urlcolor=urbnblue,
 }
 
 % contact information
@@ -47,70 +47,70 @@
     \draw 
       node[anchor=south west, minimum height=0.5in, minimum width=8.5in, text width=8in] at ($(current page.south west) + (0.75in,0.13in)$) 
       {\color{gray}Urban Institute \space
-      \color{urbanblue}$\blacksquare$ \space
+      \color{urbnblue}$\blacksquare$ \space
       \color{gray}2100 M Street NW \space
-      \color{urbanblue}$\blacksquare$ \space
+      \color{urbnblue}$\blacksquare$ \space
       \color{gray}Washington, DC 20037 \space
-      \color{urbanblue}$\blacksquare$ \space
+      \color{urbnblue}$\blacksquare$ \space
       \color{gray}202.833.7200 \space
-      \color{urbanblue}$\blacksquare$ \space
-      \textcolor{urbanblue}{www.urban.org}};
+      \color{urbnblue}$\blacksquare$ \space
+      \textcolor{urbnblue}{www.urban.org}};
   \end{tikzpicture}
 }
 
 % titles (14pt font)
-\newcommand{\urbantitle}[1]{
+\newcommand{\urbntitle}[1]{
   \begin{center}
       \textbf{\LARGE{#1}}
   \end{center}
 }
   
 % subtitles (12pt font)
-\newcommand{\urbansubtitle}[1]{
+\newcommand{\urbnsubtitle}[1]{
   \begin{center}
-    \Large{\textcolor{urbanblue}{#1}}
+    \Large{\textcolor{urbnblue}{#1}}
   \end{center}
 }
 
 % authors (11pt font)
-\newcommand{\urbanauthors}[1]{
+\newcommand{\urbnauthors}[1]{
   \begin{center}
     \textit{\large{#1}}
   \end{center}
 }
 
 % subhead
-\newcommand{\urbansubhead}[1]{
+\newcommand{\urbnsubhead}[1]{
   \textbf{\LARGE{\\} \large{#1}}
 }
 
 % figure label
-\newcommand{\urbanfigurenumber}[1]{
-  \textcolor{urbanblue}{\tiny{\\} \normalsize{FIGURE #1 \\}}
+\newcommand{\urbnfigurenumber}[1]{
+  \textcolor{urbnblue}{\tiny{\\} \normalsize{FIGURE #1 \\}}
 }
 
 % figure title
-\newcommand{\urbanfiguretitle}[1]{
+\newcommand{\urbnfiguretitle}[1]{
   \textbf{\normalsize{#1} \\}
 }
 
 % figure source
-\newcommand{\urbansource}[1]{
+\newcommand{\urbnsource}[1]{
   \textbf{\footnotesize{#1}} \break
 }
 
 % figure note
-\newcommand{\urbannote}[1]{
+\newcommand{\urbnnote}[1]{
   \textbf{\footnotesize{#1}} \break
 }
 
 % bullet points
-\renewcommand{\labelitemi}{\color{urbanblue}\tiny$\blacksquare$}   % blue square
-\renewcommand{\labelitemii}{\color{urbanblue}\tiny$\blacksquare$}  % blue square
-\renewcommand{\labelitemiii}{\color{urbanblue}\tiny$\blacksquare$} % blue square
-\renewcommand{\labelitemiv}{\color{urbanblue}\tiny$\blacksquare$}  % blue square
+\renewcommand{\labelitemi}{\color{urbnblue}\tiny$\blacksquare$}   % blue square
+\renewcommand{\labelitemii}{\color{urbnblue}\tiny$\blacksquare$}  % blue square
+\renewcommand{\labelitemiii}{\color{urbnblue}\tiny$\blacksquare$} % blue square
+\renewcommand{\labelitemiv}{\color{urbnblue}\tiny$\blacksquare$}  % blue square
 
-\newenvironment{urbanbullets}
+\newenvironment{urbnbullets}
 {\begin{itemize}[leftmargin=*,labelindent=0.25in,labelsep=0.1875in]
 \setlength{\itemsep}{0pt}
 \setlength{\parskip}{0pt}
@@ -118,7 +118,7 @@
 {\end{itemize}} 
 
 % numbered list
-\newenvironment{urbanenumerate}
+\newenvironment{urbnenumerate}
 {\begin{enumerate}[leftmargin=*,labelindent=0.25in,labelsep=0.15625in]
 \setlength{\itemsep}{0pt}
 \setlength{\parskip}{0pt}
@@ -126,7 +126,7 @@
 {\end{enumerate}} 
 
 % boiler plate
-\newcommand{\urbanboilerplate}[3]{
+\newcommand{\urbnboilerplate}[3]{
   \thispagestyle{empty}
   
   \begin{tikzpicture}[remember picture, overlay]
