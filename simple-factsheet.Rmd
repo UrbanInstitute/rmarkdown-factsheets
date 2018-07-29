@@ -25,15 +25,6 @@ options(knitr.kable.NA = "")
   \label{fig:boat1}
 \end{figure}
 
-\begin{center}
-
-    \textbf{\LARGE{Title of a Simple Factsheet Template Title of a Simple Factsheet Template Title of a Simple Factsheet Template Title of a Simple Factsheet Template Title of a Simple Factsheet Template}}
-\end{center}
-  
-\begin{center}
-  \Large{\textcolor{urbnblue}{Subtitle of a Simple Factsheet Template}} \small{}
-\end{center}
-
 \urbntitle{Title of a Simple Factsheet Template}
 \urbnsubtitle{Subtitle of a Simple Factsheet Template}
 \urbnauthors{Aaron Williams, Irvin Mull, and Graham MacDonald}
