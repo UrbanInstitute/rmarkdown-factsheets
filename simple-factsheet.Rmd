@@ -20,44 +20,44 @@ options(knitr.kable.NA = "")
 ```
 
 \begin{figure}
-  \hspace{-0.08in}
+  \hspace{-0.12in}
   \includegraphics[width=1.5in]{design/urban_grid_blue_white.jpg}
   \label{fig:boat1}
 \end{figure}
 
-\urbantitle{Title of a Simple Factsheet Template}
-\urbansubtitle{Subtitle of a Simple Factsheet Template}
-\urbanauthors{Aaron Williams, Irvin Mull, and Graham MacDonald}
+\urbntitle{Title of a Simple Factsheet Template}
+\urbnsubtitle{Subtitle of a Simple Factsheet Template}
+\urbnauthors{Aaron Williams, Irvin Mull, and Graham MacDonald}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\urbansubhead{Subhead}
+\urbnheadingone{Heading 1}
 
-Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\urbnheadingtwo{Heading 2}Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in qui officia deserunt mollit anim id est laborum.
 
-\urbanfigurenumber{1}
-\urbanfiguretitle{Figure Title}
+\urbnfigurenumber{1}
+\urbnfiguretitle{Figure Title}
 
 [figure]
 
-\urbansource{Source: }
-\urbansource{Note: }
+\urbnsource{Source: }
+\urbnsource{Note: }
 
 This factsheet has powerful footnote\footnote{Don't worry about numbering!} capabilities. 
 
-\begin{urbanbullets}
+\begin{urbnbullets}
   \item Bulleted list
   \item Bulleted list
   \item Bulleted list
-\end{urbanbullets}
+\end{urbnbullets}
 
-\begin{urbanenumerate}
+\begin{urbnenumerate}
   \item Numbered list
   \item Numbered list
   \item Numbered list
-\end{urbanenumerate}
+\end{urbnenumerate}
 
 \contactinfo{}
 
@@ -69,5 +69,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Here's a second instance\footnote{Footnotes on the second page appear below the funder statement} of footnotes.
 several features.
 
-\urbanboilerplate{The Urban Institute R Users Group}{April}{2018}
+\urbnboilerplate{The Urban Institute R Users Group}{April}{2018}
 
