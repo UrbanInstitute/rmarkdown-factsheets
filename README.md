@@ -37,6 +37,8 @@ Fork this respoitory or download the contents of this repository to get access t
 Some of the changes require using custom LaTeX macros:
 
 * `\contactinfo{}` Adds the Urban Institute contact information to the end of the page. 
+* `\urbnlogo{}` Add the Urban Institute logo to the top left of the page
+* `\urbnlogofunderlogo{}` Adds `\urbnlogo{}` and adds a funder logo to the top right of the page **Argument:** path to location of the funder logo
 * `\urbntitle{}` Adds formatted title. **Argument:** text of title
 * `\urbnsubtitle{}` Adds formatted subtitle. **Argument:** text of subtitle
 * `\urbnauthors{}` Adds formatted byline. **Argument:** text of byline
@@ -81,6 +83,12 @@ Some of the changes require using custom LaTeX environments:
 * Subtitles should be 12 pt Lato, regular, Urban blue.
 * Author name(s) should appear on page 1 under the title (and subtitle, if applicable). Author name(s) should be 11 pt Lato, italic, black, 12 points of space after the paragraph.
 * Make heavy use of the [Urban Institute Data Visualization Style Guide](http://urbaninstitute.github.io/graphics-styleguide/)
+
+## Iteration
+
+The template (for example, simple-factsheet.Rmd) is iterated with the `iterate.R` script. 
+
+`iterate.R` takes an index, creates a data frame with outfile names and parameters, and iterates the template across each row of the data frame. 
 
 ## Contributors
 
