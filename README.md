@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains tools and templates for creating Urban Institute-styled, PDF factsheets in [R Markdown](https://rmarkdown.rstudio.com/). 
+This repository contains tools and templates for creating Urban Institute-styled, PDF factsheets in [R Markdown](https://rmarkdown.rstudio.com/). For more information, read [Iterated fact sheets with R Markdown](https://medium.com/@urban_institute/iterated-fact-sheets-with-r-markdown-d685eb4eafce) and [Iterated PDFs with R Markdown](https://medium.com/@urban_institute/iterated-pdfs-with-r-markdown-144e2a6d6a1a).
 
 ## Getting started
 
