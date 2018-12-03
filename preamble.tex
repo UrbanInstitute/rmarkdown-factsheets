@@ -14,6 +14,7 @@
 \usepackage{tabu}
 \usepackage{threeparttable}
 \usepackage[normalem]{ulem}
+\usepackage[export]{adjustbox}  % enables two column images at the top
 
 % set font encoding for PDFLaTeX or XeLaTeX
 \usepackage[utf8]{inputenc}   % sets document encoding to utf8
@@ -42,6 +43,33 @@
 \usepackage{parskip}
 \setlength{\parskip}{0.1in}               % set paragraph spacing
 
+% urban institute logo
+\newcommand{\urbnlogo}[0]{
+  \begin{figure}
+    \hspace{-0.12in}
+    \includegraphics[width=1.5in]{design/urban_grid_blue_white.jpg}
+    \label{fig:boat1}
+  \end{figure}
+}
+
+% urban institute logo and fund logo
+\newcommand{\urbnlogofunderlogo}[1]{
+  \begin{figure}
+  \centering
+  \begin{minipage}{.5\textwidth}
+    \centering
+    \hspace{-0.12in}  
+    \includegraphics[width=1.5in,left]{design/urban_grid_blue_white.jpg}
+    \label{fig:test1}
+  \end{minipage}%
+  \begin{minipage}{.5\textwidth}
+    \centering
+    \hspace{0.12in} 
+    \includegraphics[width=1.5in,right]{#1}
+    \label{fig:test2}
+  \end{minipage}
+  \end{figure}
+}
 
 % contact information
 \newcommand{\contactinfo}[0]{

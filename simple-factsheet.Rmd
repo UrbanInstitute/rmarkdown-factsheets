@@ -19,11 +19,7 @@ knitr::opts_chunk$set(dev = "cairo_pdf")
 options(knitr.kable.NA = "")
 ```
 
-\begin{figure}
-  \hspace{-0.12in}
-  \includegraphics[width=1.5in]{design/urban_grid_blue_white.jpg}
-  \label{fig:boat1}
-\end{figure}
+\urbnlogo{}
 
 \urbntitle{Title of a Simple Factsheet Template}
 \urbnsubtitle{Subtitle of a Simple Factsheet Template}
