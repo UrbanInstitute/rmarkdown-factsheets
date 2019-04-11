@@ -1,0 +1,207 @@
+% explicitly call these packages to avoid this issue:
+% https://stackoverflow.com/questions/46080853/why-does-rendering-a-pdf-from-rmarkdown-require-closing-rstudio-between-renders?
+% utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{color}          % enables font colors
+\usepackage[table]{xcolor}  % enables even more font and background colors
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage[normalem]{ulem}
+\usepackage[export]{adjustbox}  % enables two column images at the top
+
+% set font encoding for PDFLaTeX or XeLaTeX
+\usepackage[utf8]{inputenc}   % sets document encoding to utf8
+\usepackage[default]{lato}    % sets default font to Lato
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{memhfixc}
+\usepackage{amssymb}          % for itemized list styles
+
+% document setup
+\definecolor{urbnblue}{HTML}{1696D2}    % defines the Urban Institute blue color
+\usepackage{enumitem}                   % bullet alignment
+\setlist[2]{nosep}                      % sets the itemsep and parsep for all level two lists to 0
+\setenumerate{nosep}                    % sets no itemsep for enumerate lists only
+\pagenumbering{gobble}                  % disable page numbering
+\usepackage[hang,flushmargin]{footmisc} % don't indent footnotes
+\usepackage[document]{ragged2e}         % ragged right
+\usepackage[none]{hyphenat}             % disable work breaks
+\usepackage{changepage}
+\renewcommand\thefootnote{\textcolor{urbnblue}{\arabic{footnote}}} % change the color of the footnote indicator
+\hypersetup{
+  colorlinks,
+  linkcolor=urbnblue,
+  urlcolor=urbnblue,
+}
+\usepackage{parskip}
+\setlength{\parskip}{0.1in}               % set paragraph spacing
+
+% urban institute logo
+\newcommand{\urbnlogo}[0]{
+  \begin{figure}
+    \hspace{-0.12in}
+    \includegraphics[width=1.5in]{design/urban_grid_blue_white.jpg}
+    \label{fig:boat1}
+  \end{figure}
+}
+
+% urban institute logo and fund logo
+\newcommand{\urbnlogofunderlogo}[1]{
+  \begin{figure}
+  \centering
+  \begin{minipage}{.5\textwidth}
+    \centering
+    \hspace{-0.12in}  
+    \includegraphics[width=1.5in,left]{design/urban_grid_blue_white.jpg}
+    \label{fig:test1}
+  \end{minipage}%
+  \begin{minipage}{.5\textwidth}
+    \centering
+    \hspace{0.12in} 
+    Funded by:
+    \includegraphics[width=1.5in,right]{#1}
+    \label{fig:test2}
+  \end{minipage}
+  \end{figure}
+}
+
+% contact information
+\newcommand{\contactinfo}[0]{
+  \thispagestyle{empty}
+  \begin{tikzpicture}[remember picture, overlay]
+    \draw 
+      node[anchor=south west, minimum height=0.5in, minimum width=8.5in, text width=8in] at ($(current page.south west) + (0.75in,0.13in)$) 
+      {\color{gray}Urban Institute \space
+      \color{urbnblue}$\blacksquare$ \space
+      \color{gray}500 L'Enfant Plaza \space
+      \color{urbnblue}$\blacksquare$ \space
+      \color{gray}Washington, DC 20024 \space
+      \color{urbnblue}$\blacksquare$ \space
+      \color{gray}202.833.7200 \space
+      \color{urbnblue}$\blacksquare$ \space
+      \textcolor{urbnblue}{www.urban.org}};
+  \end{tikzpicture}
+}
+
+% titles (14pt font)
+\newcommand{\urbntitle}[1]{
+  \textbf{\LARGE{#1}}\\
+  \vspace{0.1in}
+}
+  
+% subtitles (12pt font)
+\newcommand{\urbnsubtitle}[1]{
+    {\Large \textcolor{urbnblue}{#1}}\\
+    \vspace{0.1in}
+}
+
+% authors (11pt font)
+\newcommand{\urbnauthors}[1]{
+    {\large \textit{#1}}\\
+    \vspace{0.1in} 
+}
+
+% heading 1
+\newcommand{\urbnheadingone}[1]{
+  \textbf{\LARGE{\\} \large{#1}}
+}
+
+% heading 2
+\newcommand{\urbnheadingtwo}[1]{
+  \textbf{\textcolor{urbnblue}{#1}}
+}
+
+% figure label
+\newcommand{\urbnfigurenumber}[1]{
+  \textcolor{urbnblue}{\tiny{\\} \normalsize{FIGURE #1 \\}}
+}
+
+% figure title
+\newcommand{\urbnfiguretitle}[1]{
+  \textbf{\normalsize{#1} \\}
+}
+
+% figure source
+\newcommand{\urbnsource}[1]{
+  \textbf{\footnotesize{#1}} \break
+}
+
+% figure note
+\newcommand{\urbnnote}[1]{
+  \textbf{\footnotesize{#1}} \break
+}
+
+% bullet points
+\renewcommand{\labelitemi}{\color{urbnblue}\tiny$\blacksquare$}   % blue square
+\renewcommand{\labelitemii}{\color{urbnblue}\tiny$\blacksquare$}  % blue square
+\renewcommand{\labelitemiii}{\color{urbnblue}\tiny$\blacksquare$} % blue square
+\renewcommand{\labelitemiv}{\color{urbnblue}\tiny$\blacksquare$}  % blue square
+
+\newenvironment{urbnbullets}
+{\begin{itemize}[leftmargin=*,labelindent=0.25in,labelsep=0.1875in]
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}}
+{\end{itemize}} 
+
+% numbered list
+\newenvironment{urbnenumerate}
+{\begin{enumerate}[leftmargin=*,labelindent=0.25in,labelsep=0.15625in]
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}}
+{\end{enumerate}} 
+
+% boiler plate
+\newcommand{\urbnboilerplate}[3]{
+  \thispagestyle{empty}
+  
+  \begin{tikzpicture}[remember picture, overlay]
+    % horizontal line
+    \draw (current page.south west) + (1in,1.25in) -- ($(current page.south east) + (-1in, 1.25in)$);  
+    % boilerplat language
+    \draw 
+      node[align=left, anchor=south west, minimum height=0.5in, minimum width=8.5in, text width=6.5in] at ($(current page.south west) + (0in,0.38in)$) 
+      {
+      \small{This fact sheet was funded by #1. The views expressed are those of the author/authors and should not be attributed to the Urban Institute, its trustees, or its funders. Further information on the Urban Institute’s funding principles is available at \href{https://www.urban.org/aboutus/our-funding/funding-principles}{urban.org/fundingprinciples.}
+      
+      
+      Copyright © #2 #3. Urban Institute. Permission is granted for reproduction of this file, with attribution to the Urban Institute.}
+      };
+      \end{tikzpicture}
+}
+
+
+% boiler plate
+\newcommand{\urbnsidebar}{
+  \thispagestyle{empty}
+  
+  \begin{tikzpicture}[remember picture, overlay]
+  
+  \draw 
+    node[align=left, anchor=north west, minimum height=0.5in, minimum width=2in, text width=2in] at ($(current page.north west) + (0.625in,-3in)$) 
+      {% begin sidebar text
+      Use this sidebar panel to \textcolor{urbnblue}{highlight key points from your fact sheet} (Sidebar text style).
+      \vspace{0.15in}
+      \rule{2in}{0.01in}
+      \vspace{0.15in}
+      
+      Use sidebar bold style to emphasize \textcolor{urbnblue}{the most important takeaways for your audience.} Each panel should have some bolded point of emphasis.
+      
+      
+      % end sidebar text
+      };
+      
+  \end{tikzpicture}
+}
+
+
+
