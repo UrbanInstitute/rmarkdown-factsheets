@@ -187,11 +187,35 @@
   \begin{tikzpicture}[remember picture, overlay]
   
   \draw 
-    node[align=left, anchor=north west, minimum height=0.5in, minimum width=2in, text width=2in] at ($(current page.north west) + (0.625in,-3in)$) 
+    node[align=left, anchor=north west, minimum height=0.5in, minimum width=2in, text width=2in] at ($(current page.north west) + (0.625in,-2.75in)$) 
       {% begin sidebar text
       Use this sidebar panel to \textcolor{urbnblue}{highlight key points from your fact sheet} (Sidebar text style).
       \vspace{0.15in}
       \rule{2in}{0.01in}
+      \vspace{0.15in}
+      
+      Use sidebar bold style to emphasize \textcolor{urbnblue}{the most important takeaways for your audience.} Each panel should have some bolded point of emphasis.
+      
+      
+      % end sidebar text
+      };
+      
+  \end{tikzpicture}
+}
+
+
+% boiler plate
+\newcommand{\urbnauthorsidebar}{
+  \thispagestyle{empty}
+  
+  \begin{tikzpicture}[remember picture, overlay]
+  
+  \draw 
+    node[align=left, anchor=north west, minimum height=0.5in, minimum width=2.5in, text width=2.5in] at ($(current page.north west) + (4.875in,-0.8in)$) 
+      {% begin sidebar text
+      Use this sidebar panel to \textcolor{urbnblue}{highlight key points from your fact sheet} (Sidebar text style).
+      \vspace{0.15in}
+      \rule{2.5in}{0.01in}
       \vspace{0.15in}
       
       Use sidebar bold style to emphasize \textcolor{urbnblue}{the most important takeaways for your audience.} Each panel should have some bolded point of emphasis.
