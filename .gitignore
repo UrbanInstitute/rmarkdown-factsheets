@@ -40,3 +40,6 @@ vignettes/*.pdf
 
 # Microsoft word example factsheets
 *word-examples/
+
+# LaTeX log files
+*.log

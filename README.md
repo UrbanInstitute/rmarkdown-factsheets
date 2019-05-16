@@ -47,7 +47,7 @@ Some of the changes require using custom LaTeX macros:
 * `\urbnfiguretitle{}` Adds formatted figure title. **Argument:** title of figure
 * `\urbnsource{}` Adds formatted figure source. **Argument:** source of figure
 * `\urbnnote{}` Adds formatted figure note. **Argument:** note of figure
-* `\urbnboilerplate{}{}{}` Adds Urban Institute boilerplate to end of current page. **Arguments:** funder name, month, year
+* `\urbnboilerplate{}{}{}` Adds Urban Institute boilerplate to end of current page. **Arguments:** funder name, month, year. **Note:** The boilerplate is in an absolute position, not a relative position. 
 
 ### Environments
 
@@ -73,6 +73,17 @@ Some of the changes require using custom LaTeX environments:
 \end{urbnenumerate}
 ```
 
+### Data visualizations
+
+Styled data visualizations can be created with [urbnthemes](https://github.com/UI-Research/urbnthemes). Install the package and include the following at the top of the `.Rmd` file:
+
+```
+library(tidyverse)
+library(urbnthemes)
+
+set_urbn_defaults(style = "print")
+```
+
 ## General guidelines
 
 * No text smaller than 9 point.
@@ -83,6 +94,7 @@ Some of the changes require using custom LaTeX environments:
 * Subtitles should be 12 pt Lato, regular, Urban blue.
 * Author name(s) should appear on page 1 under the title (and subtitle, if applicable). Author name(s) should be 11 pt Lato, italic, black, 12 points of space after the paragraph.
 * Make heavy use of the [Urban Institute Data Visualization Style Guide](http://urbaninstitute.github.io/graphics-styleguide/)
+* Hyperlinks should be included using `\href{}{}`
 
 ## Iteration
 
