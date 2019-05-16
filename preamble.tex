@@ -15,6 +15,8 @@
 \usepackage{threeparttable}
 \usepackage[normalem]{ulem}
 \usepackage[export]{adjustbox}  % enables two column images at the top
+\usepackage{makecell}           % for library(kableExtra)
+%\usepackage{tabularx}           % for library(kableExtra)
 
 % set font encoding for PDFLaTeX or XeLaTeX
 \usepackage[utf8]{inputenc}   % sets document encoding to utf8
@@ -143,6 +145,21 @@
   \textbf{\footnotesize{#1}} \break
 }
 
+% table label
+\newcommand{\urbntablenumber}[1]{
+  \textcolor{urbnblue}{\tiny{\\} \normalsize{TABLE #1 \\}}
+}
+
+% table title
+\newcommand{\urbntabletitle}[1]{
+  \textbf{\normalsize{#1} \\}
+}
+
+% table sub title
+\newcommand{\urbntablesubtitle}[1]{
+  \textit{\normalsize{#1} \\}
+}
+
 % bullet points
 \renewcommand{\labelitemi}{\color{urbnblue}\tiny$\blacksquare$}   % blue square
 \renewcommand{\labelitemii}{\color{urbnblue}\tiny$\blacksquare$}  % blue square
@@ -183,3 +200,8 @@
       \end{tikzpicture}
 }
 
+% eliminates top border line for the table
+\def\toprule{}
+
+% sets midline at 1pt
+\setlength{\lightrulewidth}{1pt}

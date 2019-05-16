@@ -39,15 +39,19 @@ Some of the changes require using custom LaTeX macros:
 * `\contactinfo{}` Adds the Urban Institute contact information to the end of the page. 
 * `\urbnlogo{}` Add the Urban Institute logo to the top left of the page
 * `\urbnlogofunderlogo{}` Adds `\urbnlogo{}` and adds a funder logo to the top right of the page **Argument:** path to location of the funder logo
-* `\urbntitle{}` Adds formatted title. **Argument:** text of title
-* `\urbnsubtitle{}` Adds formatted subtitle. **Argument:** text of subtitle
-* `\urbnauthors{}` Adds formatted byline. **Argument:** text of byline
-* `\urbnsubhead{}` Adds formatted subhead. **Argument:** text of subhead
-* `\urbnfigurenumber{}` Adds formatted figure label. **Argument:** number of figure
-* `\urbnfiguretitle{}` Adds formatted figure title. **Argument:** title of figure
-* `\urbnsource{}` Adds formatted figure source. **Argument:** source of figure
-* `\urbnnote{}` Adds formatted figure note. **Argument:** note of figure
+* `\urbntitle{}` Adds formatted title. **Argument:** title text
+* `\urbnsubtitle{}` Adds formatted subtitle. **Argument:** text subtitle
+* `\urbnauthors{}` Adds formatted byline. **Argument:** byline text
+* `\urbnsubhead{}` Adds formatted subhead. **Argument:** subhead text
+* `\urbnfigurenumber{}` Adds formatted figure label. **Argument:** figure number
+* `\urbnfiguretitle{}` Adds formatted figure title. **Argument:** figure title
+* `\urbnsource{}` Adds formatted figure source. **Argument:** figure source
+* `\urbnnote{}` Adds formatted figure note. **Argument:**  figure note
 * `\urbnboilerplate{}{}{}` Adds Urban Institute boilerplate to end of current page. **Arguments:** funder name, month, year. **Note:** The boilerplate is in an absolute position, not a relative position. 
+* `\urbntablenumber{}` Adds formatted table number. **Argument:** table number
+* `\urbntabletitle{}` Adds a formatted table title. **Argument:** table title text
+* `\urbntablesubtitle{}` Adds formatted table subtitle. **Argument:** table subtitle text
+
 
 ### Environments
 
@@ -114,3 +118,4 @@ The template (for example, simple-factsheet.Rmd) is iterated with the `iterate.R
 * Bhargavi Ganesh
 * Irvin Mull
 * Graham MacDonald 
+* Sybil Mendonca
