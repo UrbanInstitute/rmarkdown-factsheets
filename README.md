@@ -94,6 +94,7 @@ set_urbn_defaults(style = "print")
 * Subtitles should be 12 pt Lato, regular, Urban blue.
 * Author name(s) should appear on page 1 under the title (and subtitle, if applicable). Author name(s) should be 11 pt Lato, italic, black, 12 points of space after the paragraph.
 * Make heavy use of the [Urban Institute Data Visualization Style Guide](http://urbaninstitute.github.io/graphics-styleguide/)
+* Hyperlinks should be included using `\href{}{}`
 
 ## Iteration
 
