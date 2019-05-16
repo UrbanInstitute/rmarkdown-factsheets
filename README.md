@@ -47,7 +47,7 @@ Some of the changes require using custom LaTeX macros:
 * `\urbnfiguretitle{}` Adds formatted figure title. **Argument:** title of figure
 * `\urbnsource{}` Adds formatted figure source. **Argument:** source of figure
 * `\urbnnote{}` Adds formatted figure note. **Argument:** note of figure
-* `\urbnboilerplate{}{}{}` Adds Urban Institute boilerplate to end of current page. **Arguments:** funder name, month, year
+* `\urbnboilerplate{}{}{}` Adds Urban Institute boilerplate to end of current page. **Arguments:** funder name, month, year. **Note:** The boilerplate is in an absolute position, not a relative position. 
 
 ### Environments
 
@@ -71,6 +71,17 @@ Some of the changes require using custom LaTeX environments:
   \item list text
   \item list text
 \end{urbnenumerate}
+```
+
+### Data visualizations
+
+Styled data visualizations can be created with [urbnthemes](https://github.com/UI-Research/urbnthemes). Install the package and include the following at the top of the `.Rmd` file:
+
+```
+library(tidyverse)
+library(urbnthemes)
+
+set_urbn_defaults(style = "print")
 ```
 
 ## General guidelines
