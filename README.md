@@ -38,7 +38,6 @@ Some of the changes require using custom LaTeX macros:
 
 * `\contactinfo{}` Adds the Urban Institute contact information to the end of the page. 
 * `\urbnlogo{}` Add the Urban Institute logo to the top left of the page
-* `\urbnlogofunderlogo{}` Adds `\urbnlogo{}` and adds a funder logo to the top right of the page **Argument:** path to location of the funder logo
 * `\urbntitle{}` Adds formatted title. **Argument:** title text
 * `\urbnsubtitle{}` Adds formatted subtitle. **Argument:** text subtitle
 * `\urbnauthors{}` Adds formatted byline. **Argument:** byline text
